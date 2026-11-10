@@ -1,743 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PARQX Premium Eyewear. See beyond with modern sunglasses, optical frames and sports eyewear.">
-<title>PARQX | See Beyond</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Michroma&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --black: #050607;
-  --dark: #101318;
-  --silver: #e7e9ed;
-  --muted: #969da7;
-  --lime: #8dcc00;
-  --line: #282d33;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--black);
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* LOGO */
-
-.logo {
-  font-family: 'Michroma', sans-serif;
-  font-size: 30px;
-  letter-spacing: -2px;
-  font-weight: 400;
-  color: var(--silver);
-  white-space: nowrap;
-}
-
-.logo .x {
-  color: var(--lime);
-}
-
-.logo small {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 9px;
-  vertical-align: top;
-  letter-spacing: 0;
-}
-
-/* NAVIGATION */
-
-header {
-  height: 85px;
-  padding: 0 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(5,6,7,.97);
-  border-bottom: 1px solid var(--line);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-
-nav a {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #c1c5cb;
-  transition: .3s;
-}
-
-nav a:hover { color: var(--lime); }
-
-.nav-button {
-  border: 1px solid var(--lime);
-  padding: 13px 20px;
-  color: var(--lime);
-}
-
-/* HERO */
-
-.hero {
-  min-height: 680px;
-  padding: 80px 7%;
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  align-items: center;
-  gap: 35px;
-  background:
-    radial-gradient(ellipse at 80% 45%, #303944 0%, transparent 55%),
-    linear-gradient(120deg,#050607,#141a22);
-}
-
-.hero-content {
-  max-width: 560px;
-}
-
-.eyebrow {
-  font-size: 11px;
-  color: var(--lime);
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 25px;
-}
-
-.hero h1 {
-  font-family: 'Michroma', sans-serif;
-  font-size: clamp(50px,7vw,85px);
-  line-height: 1.2;
-  letter-spacing: -5px;
-  color: var(--silver);
-}
-
-.hero h1 span { color: var(--lime); }
-
-.hero h2 {
-  font-size: 15px;
-  letter-spacing: 7px;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-.hero p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 2;
-  margin: 25px 0 35px;
-}
-
-.button {
-  display: inline-block;
-  padding: 16px 27px;
-  background: var(--lime);
-  color: #080a0b;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  transition: .3s;
-}
-
-.button:hover {
-  background: white;
-  transform: translateY(-3px);
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 680px;
-  border-radius: 4px;
-  display: block;
-  filter: drop-shadow(0 25px 35px #000);
-}
-
-/* BRAND STRIP */
-
-.brand-strip {
-  padding: 25px 5%;
-  background: var(--lime);
-  color: #080a0b;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 18px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-/* COMMON SECTION */
-
-.section {
-  padding: 100px 7%;
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 55px;
-}
-
-.heading h2 {
-  font-size: clamp(27px,4vw,42px);
-  letter-spacing: 2px;
-  font-weight: 800;
-}
-
-.heading p {
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 18px;
-  line-height: 1.8;
-}
-
-/* COLLECTIONS */
-
-.collections {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 25px;
-}
-
-.card {
-  background: #11151a;
-  border: 1px solid var(--line);
-  transition: .4s;
-  overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border-color: var(--lime);
-}
-
-.card img {
-  width: 100%;
-  height: 290px;
-  object-fit: cover;
-  display: block;
-}
-
-.card-info { padding: 27px; }
-
-.card-info h3 {
-  font-size: 16px;
-  letter-spacing: 2px;
-}
-
-.card-info p {
-  font-size: 11px;
-  line-height: 1.9;
-  color: var(--muted);
-  margin: 13px 0 20px;
-}
-
-.card-info a {
-  font-size: 10px;
-  font-weight: 800;
-  color: var(--lime);
-  letter-spacing: 2px;
-}
-
-/* CAMPAIGN */
-
-.campaign {
-  min-height: 480px;
-  padding: 80px 9%;
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.2)),
-    url('https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=1800&q=85') center/cover;
-}
-
-.campaign-content { max-width: 520px; }
-
-.campaign h2 {
-  font-size: clamp(35px,5vw,60px);
-  font-weight: 900;
-  line-height: 1.15;
-}
-
-.campaign h2 span { color: var(--lime); }
-
-.campaign p {
-  font-size: 12px;
-  line-height: 2;
-  color: #d0d3d9;
-  margin: 25px 0;
-}
-
-/* ABOUT */
-
-.about {
-  padding: 100px 10%;
-  background: #101419;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: clamp(25px,4vw,40px);
-  letter-spacing: 2px;
-}
-
-.about h2 span { color: var(--lime); }
-
-.about-description {
-  max-width: 780px;
-  margin: 25px auto 55px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 2.2;
-}
-
-.values {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px;
-}
-
-.value {
-  border: 1px solid #303740;
-  padding: 30px 15px;
-}
-
-.value .symbol {
-  color: var(--lime);
-  font-size: 30px;
-  margin-bottom: 18px;
-}
-
-.value h3 {
-  font-size: 11px;
-  letter-spacing: 2px;
-}
-
-.value p {
-  font-size: 10px;
-  color: var(--muted);
-  line-height: 1.8;
-  margin-top: 12px;
-}
-
-/* CTA */
-
-.cta {
-  background: linear-gradient(120deg,#a8e600,#80b900);
-  color: #07090a;
-  text-align: center;
-  padding: 85px 7%;
-}
-
-.cta h2 {
-  font-size: clamp(28px,5vw,48px);
-  font-weight: 900;
-}
-
-.cta p {
-  font-size: 12px;
-  margin: 18px 0 28px;
-}
-
-.cta a {
-  display: inline-block;
-  background: #080a0b;
-  color: white;
-  padding: 16px 30px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-/* FOOTER */
-
-footer {
-  background: #050607;
-  padding: 65px 7% 25px;
-}
-
-.footer-main {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 35px;
-  padding-bottom: 45px;
-}
-
-.footer-logo {
-  font-family: 'Michroma', sans-serif;
-  font-size: 32px;
-  letter-spacing: -2px;
-  color: var(--silver);
-}
-
-.footer-logo span { color: var(--lime); }
-
-.footer-main p {
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 2;
-  margin-top: 15px;
-}
-
-.footer-links h3 {
-  font-size: 11px;
-  color: var(--lime);
-  letter-spacing: 2px;
-  margin-bottom: 18px;
-}
-
-.footer-links a {
-  display: block;
-  color: #b4bac3;
-  font-size: 11px;
-  margin: 13px 0;
-}
-
-.parent {
-  color: var(--lime) !important;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.footer-bottom {
-  border-top: 1px solid var(--line);
-  padding-top: 25px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-  color: #858c96;
-  font-size: 10px;
-}
-
-/* MOBILE */
-
-@media(max-width:850px) {
-  header {
-    padding: 0 5%;
-    height: 72px;
-  }
-
-  .logo { font-size: 25px; }
-
-  nav { gap: 13px; }
-
-  nav a {
-    font-size: 8px;
-    letter-spacing: 1px;
-  }
-
-  .nav-button { padding: 9px; }
-
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 65px 6%;
-  }
-
-  .hero-content { margin: auto; }
-
-  .hero-image { margin-top: 40px; }
-
-  .collections { grid-template-columns: 1fr 1fr; }
-
-  .values { grid-template-columns: 1fr 1fr; }
-}
-
-@media(max-width:550px) {
-  header { padding: 0 4%; }
-
-  .logo { font-size: 21px; }
-
-  nav { gap: 10px; }
-
-  nav a { font-size: 7px; }
-
-  .nav-button { display: none; }
-
-  .hero h1 { letter-spacing: -3px; }
-
-  .collections { grid-template-columns: 1fr; }
-
-  .card img { height: 270px; }
-
-  .section { padding: 75px 6%; }
-
-  .brand-strip { font-size: 9px; }
-
-  .footer-main { flex-direction: column; }
-
-  .footer-bottom { flex-direction: column; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARQX.com - Premium Domain For Sale</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
-<body>
-
-<!-- NAVIGATION -->
-
-<header>
-  <a href="#home" class="logo">
-    PARQ<span class="x">X</span><small>™</small>
-  </a>
-
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#collection">COLLECTION</a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact" class="nav-button">CONTACT</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-  <div class="hero-content">
-
-    <div class="eyebrow">THE FUTURE OF EYEWEAR</div>
-
-    <h1>SEE<br>BEY<span>OND.</span></h1>
-
-    <h2>PARQX EYEWEAR</h2>
-
-    <p>
-      Discover a new perspective with modern eyewear.
-      Created for those who move forward, think differently
-      and see beyond the ordinary.
-    </p>
-
-    <a href="#collection" class="button">
-      EXPLORE COLLECTION →
-    </a>
-
-  </div>
-
-  <div class="hero-image">
-    <img
-      src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1100&q=90"
-      alt="Premium sunglasses">
-  </div>
-
-</section>
-
-<!-- BRAND STRIP -->
-
-<div class="brand-strip">
-  <span>PREMIUM DESIGN</span>
-  <span>MODERN VISION</span>
-  <span>EVERYDAY STYLE</span>
-  <span>PERFORMANCE</span>
-</div>
-
-<!-- COLLECTION -->
-
-<section class="section" id="collection">
-
-  <div class="heading">
-    <div class="eyebrow">DISCOVER PARQX</div>
-    <h2>EXPLORE THE COLLECTION</h2>
-    <p>Find your style. Define your vision.</p>
-  </div>
-
-  <div class="collections">
-
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=800&q=85"
-        alt="Sunglasses">
-
-      <div class="card-info">
-        <h3>SUNGLASSES</h3>
-        <p>Contemporary eyewear for everyday confidence.</p>
-        <a href="#contact">DISCOVER MORE →</a>
-      </div>
+    <!-- Background Glow Effects -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
     </div>
 
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=800&q=85"
-        alt="Optical frames">
+    <!-- Header / Nav -->
+    <header class="relative z-10 max-w-7xl mx-auto w-full px-6 py-8 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            PARQX<span class="text-white">.com</span>
+        </div>
+        <a href="mailto:official@stunfox.com" class="text-sm font-medium bg-slate-900 border border-slate-800 hover:border-indigo-500/50 px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-indigo-500/10">
+            Make an Offer
+        </a>
+    </header>
 
-      <div class="card-info">
-        <h3>OPTICAL FRAMES</h3>
-        <p>Minimal silhouettes with a modern personality.</p>
-        <a href="#contact">DISCOVER MORE →</a>
-      </div>
-    </div>
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 text-center flex-grow flex flex-col justify-center">
+        
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-widest mx-auto mb-8">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+            Domain For Sale
+        </div>
 
-    <div class="card">
-      <img
-        src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=800&q=85"
-        alt="Lifestyle eyewear">
+        <!-- Hero Title -->
+        <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            A Premium Digital Asset <br class="hidden sm:inline"> Ready for Your Brand.
+        </h1>
 
-      <div class="card-info">
-        <h3>SPORT & ACTIVE</h3>
-        <p>Bold eyewear inspired by an active lifestyle.</p>
-        <a href="#contact">DISCOVER MORE →</a>
-      </div>
-    </div>
+        <!-- Subtitle / Description -->
+        <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-normal leading-relaxed">
+            <strong class="text-slate-200 font-semibold">PARQX.com</strong> is a short, memorable, and brandable domain name. Its sleek, modern phonetic layout makes it exceptionally versatile for next-generation platforms—from digital publishing, writing tools, and content networks to tech hubs and creative spaces.
+        </p>
 
-  </div>
-</section>
+        <!-- Use Case Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-14 text-left">
+            <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl backdrop-blur-sm">
+                <div class="text-indigo-400 mb-3 font-semibold text-lg">✍️ Writing & Publishing</div>
+                <p class="text-slate-400 text-sm leading-relaxed">Ideal for a modern blogging platform, editorial site, author network, or collaborative writing workspace.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl backdrop-blur-sm">
+                <div class="text-indigo-400 mb-3 font-semibold text-lg">🚀 Tech & Startups</div>
+                <p class="text-slate-400 text-sm leading-relaxed">A punchy, futuristic brand name built for software, SaaS products, creative agencies, or digital ventures.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl backdrop-blur-sm">
+                <div class="text-indigo-400 mb-3 font-semibold text-lg">🌐 Content & Media</div>
+                <p class="text-slate-400 text-sm leading-relaxed">Perfect fit for a digital park, curated community hub, portfolio network, or modern media outlet.</p>
+            </div>
+        </div>
 
-<!-- CAMPAIGN -->
+        <!-- Call to Action Box -->
+        <div class="bg-gradient-to-br from-indigo-950/40 via-slate-900 to-purple-950/40 border border-indigo-500/20 p-8 sm:p-10 rounded-3xl shadow-2xl max-w-xl mx-auto w-full">
+            <h3 class="text-xl font-bold text-white mb-3">Interested in acquiring PARQX.com?</h3>
+            <p class="text-slate-400 text-sm mb-6">Serious inquiries and direct offers are welcome. Get in touch with our team today.</p>
+            
+            <a href="mailto:official@stunfox.com?subject=Inquiry%20regarding%20PARQX.com" class="inline-flex justify-center items-center gap-2 w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-indigo-600/25">
+                <span>Contact: official@stunfox.com</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+            </a>
+        </div>
 
-<section class="campaign">
+    </main>
 
-  <div class="campaign-content">
-
-    <div class="eyebrow">A NEW WAY TO SEE</div>
-
-    <h2>
-      STYLE IS A<br>
-      MATTER OF<br>
-      <span>VISION.</span>
-    </h2>
-
-    <p>
-      Not just eyewear. A statement of individuality.
-      PARQX brings together design, comfort and
-      a forward-looking attitude.
-    </p>
-
-    <a href="#about" class="button">DISCOVER PARQX</a>
-
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-  <div class="eyebrow">OUR PHILOSOPHY</div>
-
-  <h2>THINK DIFFERENT. <span>SEE BEYOND.</span></h2>
-
-  <p class="about-description">
-    PARQX is a contemporary eyewear brand created for people
-    who believe in moving forward. Our vision is to bring
-    together modern aesthetics, functional design and
-    everyday expression through distinctive eyewear.
-  </p>
-
-  <div class="values">
-
-    <div class="value">
-      <div class="symbol">◈</div>
-      <h3>DESIGN</h3>
-      <p>Modern and distinctive styles.</p>
-    </div>
-
-    <div class="value">
-      <div class="symbol">✧</div>
-      <h3>COMFORT</h3>
-      <p>Designed with everyday wear in mind.</p>
-    </div>
-
-    <div class="value">
-      <div class="symbol">◎</div>
-      <h3>VISION</h3>
-      <p>A forward-looking identity.</p>
-    </div>
-
-    <div class="value">
-      <div class="symbol">X</div>
-      <h3>IDENTITY</h3>
-      <p>Confidence beyond the ordinary.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta" id="contact">
-
-  <h2>YOUR VISION. YOUR STYLE.</h2>
-
-  <p>Step into the world of PARQX.</p>
-
-  <a href="mailto:contact@parqx.com">
-    CONTACT PARQX →
-  </a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="footer-main">
-
-    <div>
-      <div class="footer-logo">
-        PARQ<span>X</span>
-      </div>
-
-      <p>
-        SEE BEYOND.<br>
-        Premium Performance & Lifestyle Eyewear.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <h3>EXPLORE</h3>
-      <a href="#home">Home</a>
-      <a href="#collection">Collections</a>
-      <a href="#about">Our Philosophy</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="footer-links">
-      <h3>OUR BRAND</h3>
-
-      <p>
-        PARQX<br>
-        Premium Eyewear
-      </p>
-
-      <p class="parent">
-        AN UMBRELLA BRAND OF<br>
-        STUNFOX ORGANISATION
-      </p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-
-    <span>© 2026 PARQX. ALL RIGHTS RESERVED.</span>
-
-    <span>POWERED BY STUNFOX ORGANISATION</span>
-
-  </div>
-
-</footer>
+    <!-- Footer -->
+    <footer class="relative z-10 max-w-7xl mx-auto w-full px-6 py-8 border-t border-slate-900 text-center text-slate-500 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div>&copy; 2026 PARQX.com. All rights reserved.</div>
+        <div>Managed by Stunfox</div>
+    </footer>
 
 </body>
 </html>

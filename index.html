@@ -3,313 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PARQX — Find & Rent Private Parking Spaces</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>PARQX.com & PARQX.in - Premium Domains For Sale</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0284c7;
-            --primary-dark: #0369a1;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --border: #e2e8f0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
         body {
-            background-color: #ffffff;
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        /* Header / Nav */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-        }
-
-        .logo {
-            font-size: 1.75rem;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--dark);
-        }
-
-        .nav-cta {
-            background: var(--dark);
-            color: white;
-            padding: 0.6rem 1.25rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-
-        .nav-cta:hover {
-            background: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            max-width: 1200px;
-            margin: 2rem auto 4rem auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                margin-top: 1rem;
-            }
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            line-height: 1.15;
-            font-weight: 800;
-            margin-bottom: 1.2rem;
-            color: var(--dark);
-            letter-spacing: -1px;
-        }
-
-        .hero-content h1 span {
-            color: var(--primary);
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-        }
-
-        /* Form Card */
-        .waitlist-card {
-            background: var(--light);
-            border: 1px solid var(--border);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-        }
-
-        .waitlist-card h3 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .waitlist-card p {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
-        }
-
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            font-size: 0.95rem;
-            outline: none;
-            transition: border 0.2s;
-        }
-
-        .form-group input:focus, .form-group select:focus {
-            border-color: var(--primary);
-        }
-
-        .btn-submit {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.9rem;
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background 0.2s;
-            margin-top: 0.5rem;
-        }
-
-        .btn-submit:hover {
-            background: var(--primary-dark);
-        }
-
-        /* Features Section */
-        .features {
-            background: var(--light);
-            padding: 5rem 2rem;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .features-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .features-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .feature-box {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-        }
-
-        .feature-box h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .feature-box p {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-box ul {
-            list-style: none;
-        }
-
-        .feature-box ul li {
-            padding: 0.5rem 0;
-            color: var(--dark);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .feature-box ul li::before {
-            content: "✓";
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.9rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
-    <!-- Header -->
-    <header>
-        <a href="#" class="logo">PARQ<span>X</span></a>
-        <a href="#join" class="nav-cta">Get Early Access</a>
+    <!-- Background Glow Effects -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="relative z-10 max-w-7xl mx-auto w-full px-6 py-8 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-wider bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            PARQX<span class="text-white">.com / .in</span>
+        </div>
+        <a href="mailto:official@stunfox.com" class="text-sm font-medium bg-slate-900 border border-slate-800 hover:border-indigo-500/50 px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-indigo-500/10">
+            Make an Offer
+        </a>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Never circle the block again. <span>Park securely.</span></h1>
-            <p>PARQX connects drivers struggling to find urban parking with homeowners and businesses who have empty driveways and unused spaces.</p>
-            <div style="display: flex; gap: 1rem; align-items: center;">
-                <span style="font-weight: 700; color: var(--dark);">🚗 Coming soon to your city</span>
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 text-center flex-grow flex flex-col justify-center">
+        
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-widest mx-auto mb-8">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+            Premium Domain Bundle For Sale
+        </div>
+
+        <!-- Hero Title -->
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">PARQX.com</span> & <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">PARQX.in</span> Are For Sale
+        </h1>
+
+        <!-- Subtitle / Description -->
+        <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+            Short, memorable, and powerful brand assets. Both extensions are exceptionally versatile—ideal for building next-generation digital platforms, writing/publishing tools, tech startups, or creative content networks.
+        </p>
+
+        <!-- Pricing Banner -->
+        <div class="inline-block bg-slate-900/80 border border-indigo-500/30 px-8 py-4 rounded-2xl mb-12 shadow-xl backdrop-blur-sm">
+            <span class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Bundle Price (Both Domains)</span>
+            <span class="text-3xl sm:text-4xl font-extrabold text-white">₹5,00,000</span>
+        </div>
+
+        <!-- Use Case Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-14 text-left">
+            <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl backdrop-blur-sm">
+                <div class="text-indigo-400 mb-3 font-semibold text-lg">✍️ Writing & Publishing</div>
+                <p class="text-slate-400 text-sm leading-relaxed">Ideal for a modern blogging platform, editorial site, author network, or collaborative writing workspace.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl backdrop-blur-sm">
+                <div class="text-indigo-400 mb-3 font-semibold text-lg">🚀 Tech & Startups</div>
+                <p class="text-slate-400 text-sm leading-relaxed">A punchy, futuristic brand name built for software, SaaS products, creative agencies, or digital ventures.</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 p-6 rounded-2xl backdrop-blur-sm">
+                <div class="text-indigo-400 mb-3 font-semibold text-lg">🌐 Content & Media</div>
+                <p class="text-slate-400 text-sm leading-relaxed">Perfect fit for a digital park, curated community hub, portfolio network, or modern media outlet.</p>
             </div>
         </div>
 
-        <!-- Lead Capture Form (Hook this up to a Google Form action or backend script) -->
-        <div class="waitlist-card" id="join">
-            <h3>Join the PARQX Waitlist</h3>
-            <p>Be the first to access spots or list your empty space when we go live.</p>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="John Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address or Phone</label>
-                    <input type="text" id="email" placeholder="name@example.com / +91..." required>
-                </div>
-                <div class="form-group">
-                    <label for="role">I want to:</label>
-                    <select id="role">
-                        <option value="driver">Find & Rent Parking (Driver)</option>
-                        <option value="host">List My Empty Space (Host)</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-submit">Request Early Access</button>
-            </form>
+        <!-- Call to Action Box -->
+        <div class="bg-gradient-to-br from-indigo-950/40 via-slate-900 to-purple-950/40 border border-indigo-500/20 p-8 sm:p-10 rounded-3xl shadow-2xl max-w-xl mx-auto w-full">
+            <h3 class="text-xl font-bold text-white mb-3">Ready to acquire this brand portfolio?</h3>
+            <p class="text-slate-400 text-sm mb-6">Genuine buyers can reach out directly to secure both domains.</p>
+            
+            <a href="mailto:official@stunfox.com?subject=Inquiry%20regarding%20PARQX%20Domains" class="inline-flex justify-center items-center gap-2 w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg shadow-indigo-600/25">
+                <span>Contact: official@stunfox.com</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+            </a>
         </div>
-    </section>
 
-    <!-- Value Props -->
-    <section class="features">
-        <div class="features-container">
-            <div class="feature-box">
-                <h3>For Drivers 🚙</h3>
-                <p>Save time, fuel, and stress by booking verified parking spots in advance right where you need them.</p>
-                <ul>
-                    <li>Guaranteed spot upon arrival</li>
-                    <li>Cheaper than commercial garages</li>
-                    <li>Safe residential & commercial zones</li>
-                </ul>
-            </div>
-            <div class="feature-box">
-                <h3>For Space Owners 🏡</h3>
-                <p>Turn your idle driveway, garage, or vacant compound slot into a reliable stream of passive income.</p>
-                <ul>
-                    <li>Monetize empty space effortlessly</li>
-                    <li>Set your own availability hours</li>
-                    <li>Verified drivers & secure payments</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 PARQX.com & PARQX.in. All rights reserved. Building the future of urban mobility.</p>
+    <footer class="relative z-10 max-w-7xl mx-auto w-full px-6 py-8 border-t border-slate-900 text-center text-slate-500 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div>&copy; 2026 PARQX Domains. All rights reserved.</div>
+        <div>Managed by Stunfox</div>
     </footer>
 
 </body>
